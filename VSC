@@ -1,0 +1,76 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("A literal baseplate script", "GrapeTheme")
+
+local Tab = Window:NewTab("Admins")
+
+local Section = Tab:NewSection("Similiar powers to admins")
+
+Section:NewButton("Infinite yield", "Admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
+
+Section:NewButton("Nameless admin", "Admin", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+end)
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Player")
+
+Section:NewTextBox("WalkSpeed", "WS", function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end)
+
+Section:NewTextBox("JumpPower", "JP", function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+end)
+
+Section:NewButton("Invisible tool (ONLY R6)", "ONLY R6 or it will be very glitchy", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)",true))()
+end)
+
+
+local Tab = Window:NewTab("Teleportation")
+
+local Section = Tab:NewSection("TP")
+
+Section:NewButton("Up left corner", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-874.981689, 14.4659224, -1020.41864, 0.759719431, 0.00269609131, 0.650245368, 2.61276853e-07, 0.999991417, -0.00414653774, -0.650250971, 0.00315037579, 0.759712934)
+end)
+
+
+Section:NewButton("Up right corner", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(872.684265, 14.4772978, -1017.62762, 0.686634183, 0.00314242137, -0.726996362, -1.63643435e-05, 0.999990702, 0.00430698181, 0.727003157, -0.00294542802, 0.686627805)
+end)
+
+
+Section:NewButton("Down left corner", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-873.476196, 14.4995089, 1018.72107, -0.744561672, -0.000615272031, 0.667553425, -6.62145624e-07, 0.999999583, 0.000920941529, -0.667553723, 0.00068525481, -0.744561315)
+end)
+
+Section:NewButton("Down right corner", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(869.954895, 14.496376, 1016.61884, -0.689873636, 0.00224750419, -0.723926306, -5.726788e-06, 0.999995172, 0.00311005721, 0.723929763, 0.00214970042, -0.689870298)
+end)
+
+local Tab = Window:NewTab("BIND")
+
+local Section = Tab:NewSection("Bind")
+
+Section:NewKeybind("to hide / to unhide", "BIND", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+
+local Tab = Window:NewTab("Credits")
+
+local Section = Tab:NewSection("Credits")
+
+Section:NewButton("Discord Server", "Click to copy", function()
+    setclipboard("https://discord.gg/tNf6Fsvk")
+    
+end)
